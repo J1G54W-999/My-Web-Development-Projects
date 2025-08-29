@@ -3,84 +3,143 @@
     <head>
         <title>Cybersecurity Teams</title>
         <style>
-            .red {
+           
+/*Defaul styles*/
+            .background-color {
+                lightgrey
+            }
+            .red_text {
                 color: black;
                 background-color: red;
             }
-            .blue {
+            .blue_text {
                 color: aqua;
                 background-color: blue;
             }
-            .purple {
+            .purple_text {
                 color: plum;
                 background-color: purple;
             }
             p {
+                display: inline-block;
                 font-family: Arial, Helvetica, sans-serif;
             }
             h1 {
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-weight: 100;
+                font-weight: 5;
             }
-            .text {
+            .info {
+                display: flex;
+                align-items: flex-start;
                 border: solid;
                 border-radius: 15px;
                 width: 700px;
-                height: 200px;
                 padding: 25px;
                 margin: 30px;
             }
             .images {
-                position: relative; left: 225px;
+                margin-left: 20px;
             }
-            .box {
-                border: solid 5px;
+            .corner_box {
+                display: inline-block;
+                border: solid 10px;
                 border-radius: 20px;
                 width: 100px; 
                 height: 25px;
                 padding: 25px;
                 margin: 30px;
             }
+            
+/* Tablet Screens*/
+            @media (max-width: 768px) {
+                body {
+                    background-color: gray;
+                }
+                .red_text {
+                    color: black;
+                    background-color: pink;
+                    }
+                    
+               .blue_text {
+                    color: blue;
+                    background-color: lightblue;
+                }
+                
+                .purple_text {
+                    color: purple;
+                    background-color: violet;
+                }
+                
+                .info {
+                    width: 100%;
+                }
+
+            }
         </style>
     </head>
     <body>
-        <h1>Cybersecurity Teams:</h1>
-        <div class="red text">
-            <h2>Red Team: Offensive</h2>
+        <h1 style="font-size: 55px">Cybersecurity Teams:</h1>
+
+        <div>
+            <p id="Text_ID">When you decide to embark on the Cyersecurity journey you have to choose one of these teams. It's kind of like choosing your first Pokemon or joining a Hogwartz house. Deciding on where your passion lies, you might be a good fit for defending against cyber attacks or you might just like to break stuff. Just keep in mind that there are threats everywhere, so don't drop your guard!</p>
+            <button id="Button_ID">Don't Click Me!</button>
+            <script>
+                document.getElementById('Button_ID').onclick = function() {
+                    document.getElementById('Text_ID').innerHTML = "Wow, really? You're lucky i'm not malware... or am I? :P";
+                };
+            </script>
+        </div>
+        <div class="red_text info">
+            <div>
+                <h2>Red Team: Offensive</h2>
                 <p>
                     <b>Role:</b> The Red Team consists of penetration testers, ethical hackers, and security professionals who simulate attacks on systems to identify vulnerabilities.<br><br>
                     <b>Objective:</b> Their primary goal is to find and exploit weaknesses in security before malicious actors can do so. They conduct controlled attacks to assess the effectiveness of security protocols and provide insights for improvement.
                 </p>
+            </div>
+            <div class="images">
+                <img src="https://images.ctfassets.net/aq13lwl6616q/36vrop1ne05SOmtdwAspLS/8bdde8b89a4af28a0161f628a3e70d58/the_red_team.jpg?w=655&fm=webp" alt="red team meme"
+                style="height: 300px; width: 300px; border:double 8px; border-radius: 20px">
+            </div>
         </div>
-        <div class="images">
-            <img src="https://images.ctfassets.net/aq13lwl6616q/36vrop1ne05SOmtdwAspLS/8bdde8b89a4af28a0161f628a3e70d58/the_red_team.jpg?w=655&fm=webp" alt="red team meme"
-            style="height: 300px; width: 300px; border:double; border-radius: 20px"
-            >
-        </div>
-        <div class="blue text">
+
+<button onClick="alert('You have been hacked!')">Join the Red Team!</button>
+
+
+        <div class="blue_text info">
+            <div>
             <h2>Blue Team: Defensive</h2>
                 <p>
                     <b>Role:</b> The Blue Team is responsible for defending an organisation’s systems against cyber attacks. They monitor, detect, and respond to security incidents, making them a highly valuable asset to the organisation.<br><br>
                     <b>Objective:</b> Their main focus is to protect the organisation from breaches, mitigate damage during an attack, and ensure that security measures are in place and functioning effectively. They analyse alerts, investigate incidents, and implement security policies.
                 </p>
+            </div>
+            <div class="images">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKVOTJQUOq4GGh9Liw5IXd_OO0PfIZb1dUg&s" alt="blue team meme"
+                style="height: 300px; width: 300px; border:double 8px; border-radius: 20px"
+                >
+            </div>
         </div>
-        <div class="images">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKVOTJQUOq4GGh9Liw5IXd_OO0PfIZb1dUg&s" alt="blue team meme"
-            style="height: 300px; width: 300px; border:double; border-radius: 20px"
-            >
-        </div>
-        <div class="purple text">    
+
+<button onClick="alert('So you like to fix things?')">Join the Blue Team!</button>
+
+        <div class="purple_text info">
+            <div>    
             <h2>Purple Team: Collaborative Security (We do both!)</h2>
                 <p>
                     <b>Role:</b> The Purple Team bridges the gap between the Red and Blue Teams, facilitating communication and collaboration between offensive and defensive security efforts.<br><br>
                     <b>Objective:</b> Their aim is to enhance the overall security posture of the organisation by sharing insights and strategies from both teams. They work to ensure that the findings from penetration tests are effectively integrated into defensive strategies, creating a more robust security framework.
                 </p>
+            </div>
+            <div class="images">
+                <img src="https://images.ctfassets.net/aq13lwl6616q/3LWezvFVVkenJMOPNwhstV/83af38348f333e3c2a83a22b6e836e84/purple_team.png?w=720&fm=webp" alt="purple team meme"
+                style="height: 300px; width: 300px; border:double 8px; border-radius: 20px"
+                >
+            </div>
         </div>
-        <div class="images">
-            <img src="https://images.ctfassets.net/aq13lwl6616q/3LWezvFVVkenJMOPNwhstV/83af38348f333e3c2a83a22b6e836e84/purple_team.png?w=720&fm=webp" alt="purple team meme"
-            style="height: 300px; width: 300px; border:double; border-radius: 20px"
-            >
+        
+<button onClick="alert('So you like power?')">Join the Purple Team!</button>
+        
+        <div class="corner_box"; style="font-size: 18px; background: lightgreen; position: fixed; bottom: 0; right: 0;">I don't move!
         </div>
-        <div class="box"; style="font-size: 18px; background: white; position: fixed; bottom: 0; right: 0;">I don't move!</div>
-    </body>
 </html>
