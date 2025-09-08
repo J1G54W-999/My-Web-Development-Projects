@@ -2,90 +2,18 @@
 <html>
     <head>
         <title>Cybersecurity Teams</title>
-        <script src="js/redButton.js"></script>
-        <script src="js/blueButton.js"></script>
-        <script src="js/purpleButton.js"></script>
-        <style>
-           
-/*Defaul styles*/
-            .background-color {
-                lightgrey
-            }
-            .red_text {
-                color: black;
-                background-color: red;
-            }
-            .blue_text {
-                color: aqua;
-                background-color: blue;
-            }
-            .purple_text {
-                color: plum;
-                background-color: purple;
-            }
-            p {
-                display: inline-block;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            h1 {
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-weight: 5;
-            }
-            .info {
-                display: flex;
-                align-items: flex-start;
-                border: solid;
-                border-radius: 15px;
-                width: 700px;
-                padding: 25px;
-                margin: 30px;
-            }
-            .images {
-                margin-left: 20px;
-            }
-            .corner_box {
-                display: inline-block;
-                border: solid 10px;
-                border-radius: 20px;
-                width: 100px; 
-                height: 25px;
-                padding: 25px;
-                margin: 30px;
-            }
-            
-/* Tablet Screens*/
-            @media (max-width: 768px) {
-                body {
-                    background-color: gray;
-                }
-                .red_text {
-                    color: black;
-                    background-color: pink;
-                    }
-                    
-               .blue_text {
-                    color: blue;
-                    background-color: lightblue;
-                }
-                
-                .purple_text {
-                    color: purple;
-                    background-color: violet;
-                }
-                
-                .info {
-                    width: 100%;
-                }
-
-            }
-        </style>
+            <script src="js/redButton.js"></script>
+            <script src="js/blueButton.js"></script>
+            <script src="js/purpleButton.js"></script>
+            <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <img src="images/teams.png" alt="test" >
-        <h1 style="font-size: 55px">Cybersecurity Teams:</h1>
+        <h1 style="font-size: 55px; margin: 30px;">Cybersecurity Teams:</h1>
+        <img src="images/teams.png" alt="test" class="teams_img">
         
         <div>
-            <p id="Text_ID">When you decide to embark on the Cyersecurity journey you have to choose one of these teams. It's kind of like choosing your first Pokemon or joining a Hogwartz house. Deciding on where your passion lies, you might be a good fit for defending against cyber attacks or you might just like to break stuff. Just keep in mind that there are threats everywhere, so don't drop your guard!</p>
+            <p id="Text_ID">When you decide to embark on the Cyersecurity journey you have to choose one of these teams. It's kind of like choosing your first Pokemon or joining a Hogwartz house. Deciding on where your passion lies, you might be a good fit for defending against cyber attacks or you might just like to break stuff. Just keep in mind that there are threats everywhere, so don't drop your guard!
+            </p>
             <button id="Button_ID">Don't Click Me!</button>
             <script>
                 document.getElementById('Button_ID').onclick = function() {
@@ -106,9 +34,7 @@
                 style="height: 300px; width: 300px; border:double 8px; border-radius: 20px">
             </div>
         </div>
-
-<button onClick="redPopup()">Join the Red Team!</button>
-
+            <button onClick="redPopup()">Join the Red Team!</button>
         <div class="blue_text info">
             <div>
             <h2>Blue Team: Defensive</h2>
@@ -123,9 +49,7 @@
                 >
             </div>
         </div>
-
-<button onClick="bluePopup()">Join the Blue Team!</button>
-
+            <button onClick="bluePopup()">Join the Blue Team!</button>
         <div class="purple_text info">
             <div>    
             <h2>Purple Team: Collaborative Security (We do both!)</h2>
@@ -140,9 +64,8 @@
                 >
             </div>
         </div>
-        
-<button onClick="purplePopup()">Join the Purple Team!</button>
-        
+            <button onClick="purplePopup()">Join the Purple Team!</button>
         <div class="corner_box"; style="font-size: 18px; background: lightgreen; position: fixed; bottom: 0; right: 0;">I don't move!
         </div>
+    </body>
 </html>

@@ -1,0 +1,82 @@
+/*Teams Image Format*/
+    .teams_img {
+        width: 900px; 
+        height: 200px;
+        border-style: groove;
+        border-radius: 25px;
+        border-width: 10px;
+        border-color: darkgrey;
+        margin: 30px;
+    }
+
+/*Defaul styles*/
+    .background-color {
+        lightgrey
+    }
+    .red_text {
+        color: black;
+        background-color: red;
+    }
+    .blue_text {
+        color: aqua;
+        background-color: blue;
+    }
+    .purple_text {
+        color: plum;
+        background-color: purple;
+    }
+    p {
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 5;
+    }
+    .info {
+        display: flex;
+        align-items: flex-start;
+        border: solid;
+        border-radius: 15px;
+        width: 700px;
+        padding: 25px;
+        margin: 30px;
+    }
+    .images {
+        margin-left: 20px;
+    }
+    .corner_box {
+        display: inline-block;
+        border: solid 10px;
+        border-radius: 20px;
+        width: 100px; 
+        height: 25px;
+        padding: 25px;
+        margin: 30px;
+    }
+            
+/* Tablet Screens*/
+    @media (max-width: 768px) {
+        body {
+            background-color: gray;
+        }
+        .red_text {
+            color: black;
+            background-color: pink;
+            }
+            
+        .blue_text {
+            color: blue;
+            background-color: lightblue;
+        }
+        
+        .purple_text {
+            color: purple;
+            background-color: violet;
+        }
+        
+        .info {
+            width: 100%;
+        }
+
+    }
